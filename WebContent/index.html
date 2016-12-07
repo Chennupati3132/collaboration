@@ -1,37 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>Bootstrap Case</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="lib/angular.min.js"></script> 
- <script type="text/javascript" src="lib/angular-route.min.js"></script> 
-<script src="js/logincntrl.js"></script> 
-<script src="js/registercntrl.js"></script> 
 
- <script src="cntrl.js"></script> 
-</head>
-<body data-ng-app="myApp">
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#/">Home</a></li>
-      <li><a href="#/blog">Blog</a></li>
-      <li><a href="#/forum">Forum</a></li>
-      <li><a href="#/login">Login</a></li>
-      <li><a href="#/register">Register</a></li>
-    </ul>
+ <script type="text/javascript" src="lib/angular.min.js"></script> 
+ <script type="text/javascript" src="lib/angular-route.min.js"></script>
+ <script type="text/javascript" src="lib/angular-cookies.js"></script>
+ 
+ 
+   <script src="js/HomeCtrl.js"></script>
+   <script src="js/SignupCtrl.js"></script>
+   <script src="js/BlogCtrl.js"></script> 
+   <script src="js/ForumCtrl.js"></script>
+   <script src="js/LoginCtrl.js"></script>
+   <script src="js/LoginService.js"></script>
+  <!--  <script src="js/UsersCtrl.js"></script> -->
+  <!--  <script src="js/FriendCtrl.js"></script> -->
+   
     
-  </div>
-</nav>
-  <div data-ng-view></div>
+  
+</head>
+<body  data-ng-app="myApp" >
 
-</body>
+				<a href="#/">Home</a>
+				<a href="#/login">Login</a>
+				<a href="#/register">Sign up</a>
+				<a href="#/blog">Blog</a>
+				<a href="#/Chat">Chat</a>
+				<a href="#/forum">Forum</a>
+				<a href="#/users">Find Friends</a>
+		
+	<div data-ng-view></div>
+	
+	</body>
 </html>
+ 

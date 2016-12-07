@@ -2,6 +2,9 @@
     <wb-module deploy-name="collaboration">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/" source-path="/WebContent/html"/>
+        <wb-resource deploy-path="/" source-path="/WebContent/js"/>
+        <wb-resource deploy-path="/" source-path="/WebContent/lib"/>
         <property name="context-root" value="collaboration"/>
         <property name="java-output-path" value="/collaboration/build/classes"/>
     </wb-module>

@@ -1,6 +1,6 @@
-var app = angular.module('blogapp',[]);
-app.controller('Blogcontroller', [ '$scope', '$http', function($scope, $http) {
-var BASE_URL = 'http://localhost:8087/collaboration/';
+var app = angular.module('blogmyApp',[]);
+app.controller('blogcntrl', [ '$scope', '$http', function($scope, $http) {
+var BASE_URL = 'http://localhost:8087/collabB';
 
 $scope.getAllBlogs= function() {
 console.log("get all blogs")
@@ -19,10 +19,10 @@ console.log("create blog")
 
 $scope.blog = { 
 id:$scope.id,
-title : $scope.title,
+tittle : $scope.tittle,
 userid:$scope.userid,
 doc:$scope.doc,
-description : $scope.description,
+content : $scope.content,
 }
 $http({
 method : 'POST',
@@ -30,10 +30,10 @@ url : BASE_URL + '/createblog',
 data : $scope.blog
 }).success(function(data, status, headers, config) {
 $scope.id='';
-$scope.title='';
+$scope.tittle='';
 $scope.userid='';
 $scope.doc='';
-$scope.description='';
+$scope.content='';
 $scope.getAllBlogs();
 }).error(function(data,status,headers,config){
 alert("error");
@@ -47,9 +47,9 @@ url:BASE_URL+'/deleteblog/'+id
 $scope.getAllBlogs();
 })
 };
-$scope.editblog=function(id,title,description){
+$scope.editblog=function(id,tittle,content){
 $scope.id=id;
-$scope.title=title;
-$scope.description=description;
+$scope.tittle=tittle;
+$scope.content=content;
 }
 }]);

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html  >
+<html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <script type="text/javascript" src="lib/angular.min.js"></script>
-<script type="text/javascript" src="lib/angular-route.min.js"></script>
+<script type="text/javascript" src="js/BlogCtrl.js"></script>
+<script type="text/javascript" src="js/HomeCtrl.js"></script>
 <style type="text/css">
 .btn1 {
 height: 30px;
@@ -13,27 +14,24 @@ right: 0;
 top: 5px;
 border-radius:1px;
 }
-  body{
-      padding-top:100px;
-      }
 </style>
 </head>
-<body data-ng-app="blogapp">
+<body data-ng-app="blogmyApp">
 
 <div class="container">
-<div data-ng-controller="Blogcontroller">
+<div data-ng-controller="blogcntrl">
 <form role="form" class="form-horizontal" action="" data-ng-submit="submit()">
 <h2> Create Blog</h2>
 <input type="hidden" data-ng-model="id" >
 <div class="form-group">
 <label for="title" class="col-sm-3 control-label">Title</label>
 <div class="col-sm-9">
-<input type="text" name="title" data-ng-model="title" class="form-control" autofocus> <br>
+<input type="text" name="tittle" data-ng-model="tittle" class="form-control" autofocus> <br>
 </div></div>
 <div class="form-group">
 <label for="description" class="col-sm-3 control-label">Description</label>
 <div class="col-sm-9">
-<textarea draggable="false" rows="10" name="description" data-ng-model="description" class="form-control"></textarea>
+<textarea draggable="false" rows="10" name="content" data-ng-model="content" class="form-control"></textarea>
 </div></div>
 <div class="form-group">
 <div class="col-sm-9 col-sm-offset-3">
@@ -61,9 +59,9 @@ border-radius:1px;
 <div class="well">
 <h2 class="text-info">{{blog.title}}</h2> 
 <hr> 
-<p>{{blog.description}}</p>
+<p>{{blog.content}}</p>
 <hr>
-<p><button data-ng-click="editblog(blog.id,blog.title,blog.description)">edit</button>
+<p><button data-ng-click="editblog(blog.id,blog.tittle,blog.content)">edit</button>
 <button data-ng-click="deleteblog(blog.id)" class="btn btn-primary btn-danger">delete</button></p>
 </div>
 </div></div></div>
@@ -72,6 +70,6 @@ border-radius:1px;
 </div>
 </div>
 
-<script type="text/javascript" src="js/blogcntrl.js"></script>
+<script type="text/javascript" src="js/BlogCtrl.js"></script>
 </body>
 </html>
