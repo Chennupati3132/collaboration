@@ -1,6 +1,6 @@
 var fapp = angular.module('forummyApp',[]);
 fapp.controller('forumcntrl', [ '$scope', '$http', function($scope, $http) {
-var BASE_URL = 'http://localhost:8087/collabB';
+var BASE_URL = 'http://localhost:8081/collabB';
 
 $scope.getAllForum= function() {
 console.log("get all forums")
